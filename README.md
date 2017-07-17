@@ -2,7 +2,7 @@
  - Prototipo em desenvolvimento
 --------------------------------------------------------------------------
 
-Code by: Psychøraptør, Agent-2k40 - P4nd3møn↓um
+Code by: Psychøraptør, Agent-2k40 - DarkBunny
 
 --------------------------------------------------------------------------
 
@@ -13,6 +13,6 @@ Code by: Psychøraptør, Agent-2k40 - P4nd3møn↓um
 
 --------------------------------------------------------------------------
 
- "P4nd3møn↓um, estamos sempre por perto..."
+ "DarkBunny, estamos sempre por perto..."
 
 --------------------------------------------------------------------------
