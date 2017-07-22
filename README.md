@@ -1,18 +1,15 @@
 # Wordkey
- - Prototipo em desenvolvimento
---------------------------------------------------------------------------
-
-Code by: Psychøraptør, Agent-2k40 - DarkBunny
-
---------------------------------------------------------------------------
-
- - Programa desenvolvido para Ubuntu (Por enquanto)
- - Linguagem de programação BashScript
- - Media dificuldade de manuseio
- - Desenvolvido com intuito de facilitar e quebrar redes de forma pratica.
-
---------------------------------------------------------------------------
-
- "DarkBunny, estamos sempre por perto..."
-
---------------------------------------------------------------------------
+# --------------------------------------------------
+# Coder by: Psychøraptør, Agent-2k40 - DarkBunny
+# --------------------------------------------------
+#
+#
+# - Programa desenvolvido para Ubuntu (Por enquanto)
+# - Linguagem de programação BashScript
+# - Necessário médio conhecimento para manuseio
+# - Desenvolvido para agilizar a quebra de redes.
+#
+#
+# --------------------------------------------------
+# "DarkBunny, estamos sempre por perto"
+# --------------------------------------------------
